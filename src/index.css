@@ -55,11 +55,7 @@ body {
 }
 
 #root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
+  width: 100%;
   min-height: 100svh;
   display: flex;
   flex-direction: column;
@@ -116,7 +112,7 @@ code {
         .gold-gradient { background: linear-gradient(135deg, #d4af37 0%, #f9e29c 50%, #b8860b 100%); }
         .bg-dark-premium { background-color: #0a0a0a; }
         .card-dark { background-color: #161616; border: 1px solid #262626; }
-        .sticky-cta { position: fixed; bottom: 20px; right: 20px; z-index: 50; }
+        /* Removed .sticky-cta */
         .map-container iframe { filter: grayscale(1) invert(0.9) contrast(1.2); }
         .menu-dots { flex-grow: 1; border-bottom: 2px dotted #333; margin: 0 1rem; position: relative; top: -6px; }
         .text-outline-gold { color: transparent; -webkit-text-stroke: 2px #d4af37; }
