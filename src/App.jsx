@@ -51,7 +51,7 @@ export default function App() {
                     "@type": "AggregateRating",
                     "ratingValue": "5.0",
                     "bestRating": "5",
-                    "worstRating": "1"
+                    "worstRating": "1",
                     "reviewCount": "226"
                 },
                 "sameAs": [
