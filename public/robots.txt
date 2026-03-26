@@ -1,1 +1,55 @@
-robots.txt para José EstilistasOptimizado para Búsqueda por IA (GEO) y SEO tradicional--------------------------------------------------------1. REGLAS GENERALES PARA BUSCADORES TRADICIONALESPermitimos a Google, Bing, etc. indexar toda la web--------------------------------------------------------User-agent: *Allow: /--------------------------------------------------------2. PERMITIR BOTS DE BÚSQUEDA DE IA EN TIEMPO REALAsegura que la barbería sea citada cuando un usuariobusca en ChatGPT, Perplexity o Claude.--------------------------------------------------------User-agent: OAI-SearchBotAllow: /User-agent: PerplexityBotAllow: /User-agent: Claude-SearchBotAllow: /User-agent: ClaudeBotAllow: /--------------------------------------------------------3. BLOQUEAR BOTS DE ENTRENAMIENTO DE IA (Opcional)Si en el futuro decides que NO quieres que usen los textosy fotos de tu web para entrenar a sus modelos de IA,simplemente quita el '#' de las siguientes líneas:--------------------------------------------------------Bloquea el entrenamiento del modelo de OpenAI (ChatGPT)User-agent: GPTBotDisallow: /Bloquea el entrenamiento de los modelos de Google (Gemini)User-agent: Google-ExtendedDisallow: /Bloquea el entrenamiento de los modelos de Anthropic (Claude)User-agent: anthropic-aiDisallow: /Bloquea el rastreo masivo de Common Crawl (usado por muchas IA)User-agent: CCBotDisallow: /--------------------------------------------------------MAPA DEL SITIO--------------------------------------------------------Sitemap: https://www.google.com/search?q=https://joseestilistas.es/sitemap.xml
+# robots.txt para José Estilistas
+# Optimizado para Búsqueda por IA (GEO) y SEO tradicional
+
+# --------------------------------------------------------
+# 1. REGLAS GENERALES PARA BUSCADORES TRADICIONALES
+# Permitimos a Google, Bing, etc. indexar toda la web
+# --------------------------------------------------------
+User-agent: *
+Allow: /
+
+# --------------------------------------------------------
+# 2. PERMITIR BOTS DE BÚSQUEDA DE IA EN TIEMPO REAL
+# Asegura que la barbería sea citada cuando un usuario
+# busca en ChatGPT, Perplexity o Claude.
+# --------------------------------------------------------
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# --------------------------------------------------------
+# 3. BLOQUEAR BOTS DE ENTRENAMIENTO DE IA (Opcional)
+# Si en el futuro decides que NO quieres que usen los textos
+# y fotos de tu web para entrenar a sus modelos de IA,
+# simplemente quita el '#' de las siguientes líneas (las que 
+# empiezan por User-agent y Disallow):
+# --------------------------------------------------------
+
+# Bloquea el entrenamiento del modelo de OpenAI (ChatGPT)
+# User-agent: GPTBot
+# Disallow: /
+
+# Bloquea el entrenamiento de los modelos de Google (Gemini)
+# User-agent: Google-Extended
+# Disallow: /
+
+# Bloquea el entrenamiento de los modelos de Anthropic (Claude)
+# User-agent: ClaudeBot
+# Disallow: /
+
+# Bloquea el rastreo masivo de Common Crawl (usado por muchas IA)
+# User-agent: CCBot
+# Disallow: /
+
+# --------------------------------------------------------
+# MAPA DEL SITIO
+# --------------------------------------------------------
+Sitemap: https://joseestilistas.es/sitemap.xml
