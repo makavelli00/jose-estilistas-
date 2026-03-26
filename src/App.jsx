@@ -47,9 +47,9 @@ export default function App() {
                     "postalCode": "11407",
                     "addressCountry": "ES"
                 },
-                "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "5.0",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
                     "bestRating": "5",
                     "worstRating": "1",
                     "reviewCount": "226"
