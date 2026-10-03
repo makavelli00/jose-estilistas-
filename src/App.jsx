@@ -22,94 +22,6 @@ export default function App() {
         };
     }, []);
 
-    // Esquema de datos estructurados (JSON-LD) para GEO/SEO
-    const schemaData = {
-        "@context": "https://schema.org",
-        "@graph": [
-            {
-                "@type": ["Organization", "HairSalon", "LocalBusiness"],
-                "@id": "https://joseestilistas.es/#organization",
-                "name": "José Estilistas",
-                "url": "https://joseestilistas.es",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://joseestilistas.es/logo2.png"
-                },
-                "image": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&q=80&w=2074",
-                "description": "Barbería y peluquería premium en Jerez de la Frontera especializada en cortes degradados, clásicos y afeitado tradicional a navaja.",
-                "telephone": "+34658889486",
-                "priceRange": "€€",
-                "address": {
-                    "@type": "PostalAddress",
-                    "streetAddress": "Plaza de Nicaragua Local 1A, Parque San Joaquín",
-                    "addressLocality": "Jerez de la Frontera",
-                    "addressRegion": "Cádiz",
-                    "postalCode": "11407",
-                    "addressCountry": "ES"
-                },
-                "reviewRating": {
-                    "@type": "Rating",
-                    "ratingValue": "5",
-                    "bestRating": "5",
-                    "worstRating": "1",
-                    "reviewCount": "226"
-                },
-                "sameAs": [
-                    "https://www.instagram.com/joseestilistas/",
-                    "https://www.facebook.com/joseestilistasjerez/?locale=es_ES",
-                    "https://www.linkedin.com/company/jose-estilistas-jerez",
-                    "https://twitter.com/JoseEstilistas",
-                    "https://www.crunchbase.com/organization/jose-estilistas",
-                    "https://www.yelp.es/biz/jose-estilistas-jerez",
-                    "https://booksy.com/es-es/6593_jose-estilistas_barberia_26580_jerez-de-la-frontera"
-                ]
-            },
-            {
-                "@type": "WebPage",
-                "@id": "https://joseestilistas.es/#webpage",
-                "url": "https://joseestilistas.es",
-                "name": "José Estilistas | Barbería y Peluquería en Jerez de la Frontera",
-                "isPartOf": {
-                    "@id": "https://joseestilistas.es/#website"
-                },
-                "about": {
-                    "@id": "https://joseestilistas.es/#organization"
-                },
-                "description": "Descubre la mejor barbería de Jerez de la Frontera. Reserva tu cita online para cortes premium, degradados y afeitados tradicionales."
-            },
-            {
-                "@type": "FAQPage",
-                "@id": "https://joseestilistas.es/#faq",
-                "mainEntity": [
-                    {
-                        "@type": "Question",
-                        "name": "¿Por qué José Estilistas es considerada la mejor barbería de Jerez de la Frontera?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "José Estilistas destaca por combinar la tradición del oficio barbero con las técnicas más vanguardistas de corte masculino. Fundada en 2012, garantizamos resultados de máxima precisión respaldados por más de quince años de experiencia profesional. Nuestro entorno climatizado y exclusivo asegura una experiencia inmejorable y de alto nivel para cada cliente."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "¿Qué diferencia hay entre un corte clásico y un corte premium con degradado?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "El corte clásico utiliza un enfoque tradicional a tijera o máquina para lograr un estilo atemporal, elegante y rápido. Por el contrario, el corte premium implica un desvanecimiento milimétrico o fade que requiere una técnica mucho más exhaustiva y tiempo de ejecución. Ambos servicios incluyen un lavado opcional y asesoramiento personalizado para potenciar tus facciones."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "¿En qué consiste el servicio Wedding Barber Home para novios en Jerez?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Nuestro servicio Wedding Barber Home traslada la experiencia de una barbería de lujo directamente a tu domicilio u hotel el día de tu boda. Este servicio VIP elimina por completo el estrés del desplazamiento, asegurando que tanto el novio como los padrinos luzcan impecables. El trato es altamente personalizado y el desplazamiento es gratuito dentro de nuestras áreas de cobertura habituales."
-                        }
-                    }
-                ]
-            }
-        ]
-    };
-
     return (
         <div className="bg-[#0a0a0a] text-gray-200 min-h-screen relative font-['Inter',sans-serif]">
             {/* Estilos Globales Inyectados */}
@@ -123,9 +35,6 @@ export default function App() {
         .map-container iframe { filter: grayscale(1) invert(0.9) contrast(1.2); }
         .menu-dots { flex-grow: 1; border-bottom: 2px dotted #333; margin: 0 1rem; position: relative; top: -6px; }
       `}} />
-
-            {/* JSON-LD Script para SEO */}
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
 
             {/* Encabezado y Navegación Principal */}
             <header className="absolute w-full top-0 z-50 pt-4">
