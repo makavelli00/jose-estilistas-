@@ -1,16 +1,36 @@
-# React + Vite
+# José Estilistas · Web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Web oficial de **José Estilistas**, barbería y peluquería en Jerez de la Frontera (Plaza de Nicaragua, Local 1A, Parque San Joaquín).
 
-Currently, two official plugins are available:
+La página presenta los servicios y precios, opiniones de clientes, preguntas frecuentes y la ubicación, y permite reservar cita a través de Booksy o contactar por WhatsApp. Incluye datos estructurados (JSON-LD), `robots.txt` y `llm.txt` para mejorar el posicionamiento en buscadores y asistentes de IA.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tecnologías
 
-## React Compiler
+- [React 19](https://react.dev/) + [Vite](https://vite.dev/)
+- [Tailwind CSS](https://tailwindcss.com/), compilado con PostCSS durante el build
+- Iconos de [lucide-react](https://lucide.dev/)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Puesta en marcha
 
-## Expanding the ESLint configuration
+Necesitas [Node.js](https://nodejs.org/) 20.19 o superior.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install       # instala las dependencias
+npm run dev       # servidor de desarrollo en http://localhost:5173
+npm run build     # genera la versión de producción en dist/
+npm run preview   # sirve localmente la versión de producción
+npm run lint      # revisa el código con ESLint
+```
+
+## Estructura
+
+```
+index.html          # HTML base y metadatos SEO (JSON-LD)
+src/App.jsx         # todo el contenido de la página
+src/App.css         # estilos propios
+src/index.css       # estilos globales y directivas de Tailwind
+tailwind.config.js  # configuración de Tailwind
+public/             # logo, favicon, robots.txt y llm.txt
+```
+
+Para cambiar textos, precios o servicios, edita `src/App.jsx`.
