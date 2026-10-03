@@ -7,7 +7,7 @@ La página presenta los servicios y precios, opiniones de clientes, preguntas fr
 ## Tecnologías
 
 - [React 19](https://react.dev/) + [Vite](https://vite.dev/)
-- Tailwind CSS (cargado por CDN en `index.html`)
+- [Tailwind CSS](https://tailwindcss.com/), compilado con PostCSS durante el build
 - Iconos de [lucide-react](https://lucide.dev/)
 
 ## Puesta en marcha
@@ -25,11 +25,12 @@ npm run lint      # revisa el código con ESLint
 ## Estructura
 
 ```
-index.html        # HTML base, metadatos SEO y Tailwind
-src/App.jsx       # todo el contenido de la página
-src/App.css       # estilos propios
-src/index.css     # estilos globales
-public/           # logo, favicon, robots.txt y llm.txt
+index.html          # HTML base y metadatos SEO (JSON-LD)
+src/App.jsx         # todo el contenido de la página
+src/App.css         # estilos propios
+src/index.css       # estilos globales y directivas de Tailwind
+tailwind.config.js  # configuración de Tailwind
+public/             # logo, favicon, robots.txt y llm.txt
 ```
 
 Para cambiar textos, precios o servicios, edita `src/App.jsx`.
