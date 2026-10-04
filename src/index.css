@@ -118,6 +118,11 @@ code {
         .text-outline-gold { color: transparent; -webkit-text-stroke: 2px #d4af37; }
     
 html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+}
+/* Foco visible y coherente con la marca en todos los navegadores */
+:focus-visible { outline: 2px solid #d4af37; outline-offset: 3px; }
 
 /* Tailwind va al final para conservar la cascada que tenía el CDN (inyectaba sus estilos después de este archivo) */
 @tailwind base;
