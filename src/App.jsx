@@ -258,7 +258,7 @@ export default function App() {
                         <SocialLink href="https://www.instagram.com/joseestilistas/" label="Instagram"><Instagram /></SocialLink>
                         <SocialLink href="https://www.facebook.com/joseestilistasjerez/?locale=es_ES" label="Facebook"><Facebook /></SocialLink>
                     </nav>
-                    <p className="text-gray-400 text-sm tracking-widest uppercase mb-2">© 2024 José Estilistas • Plaza de Nicaragua 1A • Jerez</p>
+                    <p className="text-gray-400 text-sm tracking-widest uppercase mb-2">© 2026 José Estilistas • Plaza de Nicaragua 1A • Jerez</p>
                     <p className="text-2xs text-gray-400 tracking-eyebrow uppercase">Especialista en degradado y afeitado tradicional</p>
                 </div>
             </footer>
