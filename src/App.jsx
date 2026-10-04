@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 
+const BOOKSY_URL = 'https://booksy.com/es-es/6593_jose-estilistas_barberia_26580_jerez-de-la-frontera';
+
 export default function App() {
     // Configuración del desplazamiento suave (Smooth Scroll)
     useEffect(() => {
@@ -39,15 +41,15 @@ export default function App() {
             {/* Encabezado y Navegación Principal */}
             <header className="absolute w-full top-0 z-50 pt-4">
                 <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Navegación principal">
-                    <div className="flex justify-between items-center h-48">
+                    <div className="flex justify-between items-center h-28 md:h-48">
                         <div className="flex-shrink-0 flex items-center">
-                            <img src="/logo2.png" alt="Logo José Estilistas Peluquería y Estética" className="h-40 w-auto object-contain" />
+                            <img src="/logo2.png" alt="Logo José Estilistas Peluquería y Estética" className="h-20 md:h-40 w-auto object-contain" />
                         </div>
                         <div className="hidden md:flex space-x-12 mx-auto uppercase tracking-widest text-xs font-semibold">
                             <a href="#servicios" className="text-gray-400 hover:text-[#d4af37] transition-colors">Servicios</a>
                             <a href="#contacto" className="text-gray-400 hover:text-[#d4af37] transition-colors">Contacto</a>
                         </div>
-                        <a href="#reservas" className="border border-[#d4af37] text-[#d4af37] px-8 py-2.5 font-bold text-xs hover:bg-[#d4af37] hover:text-black transition-colors uppercase tracking-[0.2em]">
+                        <a href={BOOKSY_URL} target="_blank" rel="noreferrer" className="border border-[#d4af37] text-[#d4af37] px-8 py-2.5 font-bold text-xs hover:bg-[#d4af37] hover:text-black transition-colors uppercase tracking-[0.2em]">
                             Reservar
                         </a>
                     </div>
@@ -57,7 +59,7 @@ export default function App() {
             {/* Contenido Principal Semántico */}
             <main>
                 {/* Hero Section */}
-                <section id="inicio" className="relative pt-32 pb-16 lg:pt-48 lg:pb-24 overflow-hidden min-h-[90vh] flex flex-col justify-center border-b border-white/5" aria-label="Inicio">
+                <section id="inicio" className="relative pt-40 pb-16 md:pt-56 xl:pt-48 lg:pb-24 overflow-hidden min-h-[90vh] flex flex-col justify-center border-b border-white/5" aria-label="Inicio">
                     <div className="absolute inset-0">
                         <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&q=80&w=2074" alt="Interior de Barbería Premium" className="w-full h-full object-cover opacity-30" />
                         <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/80 via-transparent to-[#0a0a0a]"></div>
@@ -81,7 +83,7 @@ export default function App() {
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-6 mb-20">
-                                <a href="#reservas" className="bg-[#d4af37] text-black px-8 py-4 font-bold tracking-[0.2em] uppercase hover:bg-white transition-colors flex items-center justify-center gap-2 text-xs w-fit">
+                                <a href={BOOKSY_URL} target="_blank" rel="noreferrer" className="bg-[#d4af37] text-black px-8 py-4 font-bold tracking-[0.2em] uppercase hover:bg-white transition-colors flex items-center justify-center gap-2 text-xs w-fit">
                                     Reservar Cita <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
                                 </a>
                                 <a href="#servicios" className="border border-white/30 text-white px-8 py-4 font-bold tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-colors flex items-center justify-center text-xs w-fit">
@@ -203,7 +205,7 @@ export default function App() {
                                 <p className="text-gray-200 mb-6 font-medium drop-shadow-md">Especialistas en degradados (fade) limpios y precisos que resaltan tus facciones.</p>
                                 <div className="pt-6 border-t border-white/20 flex justify-between items-center mt-auto">
                                     <span className="text-xl font-bold text-white drop-shadow-md">13,00 €</span>
-                                    <a href="#reservas" className="text-[#d4af37] font-bold group-hover:translate-x-2 transition-transform drop-shadow-md">Reservar →</a>
+                                    <a href={BOOKSY_URL} target="_blank" rel="noreferrer" className="text-[#d4af37] font-bold group-hover:translate-x-2 transition-transform drop-shadow-md">Reservar →</a>
                                 </div>
                             </div>
                         </article>
@@ -217,7 +219,7 @@ export default function App() {
                                 <p className="text-gray-200 mb-6 font-medium drop-shadow-md">Diseño y perfilado básico de barba para un aspecto limpio y cuidado en poco tiempo.</p>
                                 <div className="pt-6 border-t border-white/20 flex justify-between items-center">
                                     <span className="text-xl font-bold text-white drop-shadow-md">7,00 €</span>
-                                    <a href="#reservas" className="text-[#d4af37] font-bold group-hover:translate-x-2 transition-transform drop-shadow-md">Reservar →</a>
+                                    <a href={BOOKSY_URL} target="_blank" rel="noreferrer" className="text-[#d4af37] font-bold group-hover:translate-x-2 transition-transform drop-shadow-md">Reservar →</a>
                                 </div>
                             </div>
                         </article>
@@ -231,7 +233,7 @@ export default function App() {
                                 <p className="text-gray-200 mb-6 font-medium drop-shadow-md">Corte tradicional a tijera o máquina. Incluye lavado, secado y peinado a medida.</p>
                                 <div className="pt-6 border-t border-white/20 flex justify-between items-center">
                                     <span className="text-xl font-bold text-white drop-shadow-md">12,00 €</span>
-                                    <a href="#reservas" className="text-[#d4af37] font-bold group-hover:translate-x-2 transition-transform drop-shadow-md">Reservar →</a>
+                                    <a href={BOOKSY_URL} target="_blank" rel="noreferrer" className="text-[#d4af37] font-bold group-hover:translate-x-2 transition-transform drop-shadow-md">Reservar →</a>
                                 </div>
                             </div>
                         </article>
@@ -253,7 +255,7 @@ export default function App() {
                                         <div className="flex items-baseline w-full">
                                             <span className="text-lg md:text-xl font-semibold text-gray-200">Corte clásico</span>
                                             <div className="menu-dots"></div>
-                                            <span className="text-xl font-bold text-[#d4af37]">12,00 €</span>
+                                            <span className="text-xl font-bold text-[#d4af37] whitespace-nowrap">12,00 €</span>
                                         </div>
                                         <div className="flex items-center gap-4 mt-1">
                                             <span className="text-xs text-gray-500 flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-clock"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg> 20 min</span>
@@ -264,7 +266,7 @@ export default function App() {
                                         <div className="flex items-baseline w-full">
                                             <span className="text-lg md:text-xl font-semibold text-gray-200">Corte Premium (Degradado)</span>
                                             <div className="menu-dots"></div>
-                                            <span className="text-xl font-bold text-[#d4af37]">13,00 €</span>
+                                            <span className="text-xl font-bold text-[#d4af37] whitespace-nowrap">13,00 €</span>
                                         </div>
                                         <div className="flex items-center gap-4 mt-1">
                                             <span className="text-xs text-gray-500 flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-clock"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg> 25 min</span>
@@ -275,7 +277,7 @@ export default function App() {
                                         <div className="flex items-baseline w-full">
                                             <span className="text-lg md:text-xl font-semibold text-gray-200">Corte INFANTIL (hasta 7 años)</span>
                                             <div className="menu-dots"></div>
-                                            <span className="text-xl font-bold text-[#d4af37]">10,00 €</span>
+                                            <span className="text-xl font-bold text-[#d4af37] whitespace-nowrap">10,00 €</span>
                                         </div>
                                         <div className="flex items-center gap-4 mt-1">
                                             <span className="text-xs text-gray-500 flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-clock"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg> 20 min</span>
@@ -286,7 +288,7 @@ export default function App() {
                                         <div className="flex items-baseline w-full">
                                             <span className="text-lg md:text-xl font-semibold text-gray-200">Corte Woman (Rapado)</span>
                                             <div className="menu-dots"></div>
-                                            <span className="text-xl font-bold text-[#d4af37]">12,00 €</span>
+                                            <span className="text-xl font-bold text-[#d4af37] whitespace-nowrap">12,00 €</span>
                                         </div>
                                         <div className="flex items-center gap-4 mt-1">
                                             <span className="text-xs text-gray-500 flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-clock"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg> 20 min</span>
@@ -297,7 +299,7 @@ export default function App() {
                                         <div className="flex items-baseline w-full">
                                             <span className="text-lg md:text-xl font-semibold text-gray-200">Corte laterales</span>
                                             <div className="menu-dots"></div>
-                                            <span className="text-xl font-bold text-[#d4af37]">10,00 €</span>
+                                            <span className="text-xl font-bold text-[#d4af37] whitespace-nowrap">10,00 €</span>
                                         </div>
                                         <div className="flex items-center gap-4 mt-1">
                                             <span className="text-xs text-gray-500 flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-clock"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg> 20 min</span>
@@ -315,7 +317,7 @@ export default function App() {
                                         <div className="flex items-baseline w-full">
                                             <span className="text-lg md:text-xl font-semibold text-gray-200">Afeitado Express ó arreglo barba</span>
                                             <div className="menu-dots"></div>
-                                            <span className="text-xl font-bold text-[#d4af37]">7,00 €</span>
+                                            <span className="text-xl font-bold text-[#d4af37] whitespace-nowrap">7,00 €</span>
                                         </div>
                                         <div className="flex items-center gap-4 mt-1">
                                             <span className="text-xs text-gray-500 flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-clock"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg> 20 min</span>
@@ -326,7 +328,7 @@ export default function App() {
                                         <div className="flex items-baseline w-full">
                                             <span className="text-lg md:text-xl font-semibold text-gray-200">Afeitado tradicional</span>
                                             <div className="menu-dots"></div>
-                                            <span className="text-xl font-bold text-[#d4af37]">14,00 €</span>
+                                            <span className="text-xl font-bold text-[#d4af37] whitespace-nowrap">14,00 €</span>
                                         </div>
                                         <div className="flex items-center gap-4 mt-1">
                                             <span className="text-xs text-gray-500 flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-clock"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg> 30 min</span>
@@ -344,7 +346,7 @@ export default function App() {
                                         <div className="flex items-baseline w-full">
                                             <span className="text-lg md:text-xl font-semibold text-gray-200">Corte clasico + Afeitado Express</span>
                                             <div className="menu-dots"></div>
-                                            <span className="text-xl font-bold text-[#d4af37]">17,00 €</span>
+                                            <span className="text-xl font-bold text-[#d4af37] whitespace-nowrap">17,00 €</span>
                                         </div>
                                         <div className="flex items-center gap-4 mt-1">
                                             <span className="text-xs text-gray-500 flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-clock"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg> 30 min</span>
@@ -355,7 +357,7 @@ export default function App() {
                                         <div className="flex items-baseline w-full">
                                             <span className="text-lg md:text-xl font-semibold text-gray-200">Corte Premium (Degradado) +Afeitado Express</span>
                                             <div className="menu-dots"></div>
-                                            <span className="text-xl font-bold text-[#d4af37]">18,00 €</span>
+                                            <span className="text-xl font-bold text-[#d4af37] whitespace-nowrap">18,00 €</span>
                                         </div>
                                         <div className="flex items-center gap-4 mt-1">
                                             <span className="text-xs text-gray-500 flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-clock"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg> 40 min</span>
@@ -366,7 +368,7 @@ export default function App() {
                                         <div className="flex items-baseline w-full">
                                             <span className="text-lg md:text-xl font-semibold text-gray-200">Corte clasico + Afeitado tradicional</span>
                                             <div className="menu-dots"></div>
-                                            <span className="text-xl font-bold text-[#d4af37]">25,00 €</span>
+                                            <span className="text-xl font-bold text-[#d4af37] whitespace-nowrap">25,00 €</span>
                                         </div>
                                         <div className="flex items-center gap-4 mt-1">
                                             <span className="text-xs text-gray-500 flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-clock"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg> 40 min</span>
@@ -377,7 +379,7 @@ export default function App() {
                                         <div className="flex items-baseline w-full">
                                             <span className="text-lg md:text-xl font-semibold text-gray-200">Corte Premium (Degradado)+Afeitado tradicional</span>
                                             <div className="menu-dots"></div>
-                                            <span className="text-xl font-bold text-[#d4af37]">26,00 €</span>
+                                            <span className="text-xl font-bold text-[#d4af37] whitespace-nowrap">26,00 €</span>
                                         </div>
                                         <div className="flex items-center gap-4 mt-1">
                                             <span className="text-xs text-gray-500 flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-clock"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg> 40 min</span>
@@ -395,7 +397,7 @@ export default function App() {
                                         <div className="flex items-baseline w-full">
                                             <span className="text-lg md:text-xl font-semibold text-gray-200">Color Barba</span>
                                             <div className="menu-dots"></div>
-                                            <span className="text-xl font-bold text-[#d4af37]">15,00 €+</span>
+                                            <span className="text-xl font-bold text-[#d4af37] whitespace-nowrap">15,00 €+</span>
                                         </div>
                                         <div className="flex items-center gap-4 mt-1">
                                             <span className="text-xs text-gray-500 flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-clock"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg> 20 min</span>
@@ -406,7 +408,7 @@ export default function App() {
                                         <div className="flex items-baseline w-full">
                                             <span className="text-lg md:text-xl font-semibold text-gray-200">Tratamiento Anti-caida</span>
                                             <div className="menu-dots"></div>
-                                            <span className="text-xl font-bold text-[#d4af37]">4,00 €</span>
+                                            <span className="text-xl font-bold text-[#d4af37] whitespace-nowrap">4,00 €</span>
                                         </div>
                                         <div className="flex items-center gap-4 mt-1">
                                             <span className="text-xs text-gray-500 flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-clock"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg> 30 min</span>
@@ -416,7 +418,7 @@ export default function App() {
                                         <div className="flex items-baseline w-full">
                                             <span className="text-lg md:text-xl font-semibold text-gray-200">Tratamiento Anti-Caspa</span>
                                             <div className="menu-dots"></div>
-                                            <span className="text-xl font-bold text-[#d4af37]">4,00 €</span>
+                                            <span className="text-xl font-bold text-[#d4af37] whitespace-nowrap">4,00 €</span>
                                         </div>
                                         <div className="flex items-center gap-4 mt-1">
                                             <span className="text-xs text-gray-500 flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-clock"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg> 30 min</span>
@@ -433,7 +435,7 @@ export default function App() {
                                         <div className="flex items-baseline w-full">
                                             <span className="text-lg md:text-xl font-semibold text-gray-200">Desplazamiento Al Domicilio</span>
                                             <div className="menu-dots"></div>
-                                            <span className="text-xl font-bold text-[#d4af37]">Gratis</span>
+                                            <span className="text-xl font-bold text-[#d4af37] whitespace-nowrap">Gratis</span>
                                         </div>
                                         <div className="flex items-center gap-4 mt-1">
                                             <span className="text-xs text-gray-500 flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-clock"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg> 30 min</span>
@@ -443,7 +445,7 @@ export default function App() {
                                         <div className="flex items-baseline w-full">
                                             <span className="text-lg md:text-xl font-semibold text-gray-200">Opción 2</span>
                                             <div className="menu-dots"></div>
-                                            <span className="text-xl font-bold text-[#d4af37]">75,00 €+</span>
+                                            <span className="text-xl font-bold text-[#d4af37] whitespace-nowrap">75,00 €+</span>
                                         </div>
                                         <div className="flex items-center gap-4 mt-1">
                                             <span className="text-xs text-gray-500 flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-clock"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg> 3 h</span>
@@ -454,7 +456,7 @@ export default function App() {
                         </div>
 
                         <div className="mt-12 text-center">
-                            <a href="#reservas" className="inline-flex items-center gap-2 gold-gradient text-black px-8 py-4 rounded-full font-bold hover:scale-105 transition-transform">
+                            <a href={BOOKSY_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 gold-gradient text-black px-8 py-4 rounded-full font-bold hover:scale-105 transition-transform">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-calendar"><rect width="18" height="18" x="3" y="4" rx="2" ry="2" /><line x1="16" x2="16" y1="2" y2="6" /><line x1="8" x2="8" y1="2" y2="6" /><line x1="3" x2="21" y1="10" y2="10" /></svg> RESERVAR MI HORA AHORA
                             </a>
                         </div>
@@ -550,7 +552,7 @@ export default function App() {
                         <h2 className="text-5xl font-bold mb-8 italic">Reserva tu momento</h2>
                         <p className="text-gray-600 mb-12 text-lg">Haz click en el botón para abrir el calendario de citas y elegir tu hora. Sin llamadas, sin esperas.</p>
 
-                        <a href="https://booksy.com/es-es/6593_jose-estilistas_barberia_26580_jerez-de-la-frontera" target="_blank" rel="noreferrer" className="inline-flex flex-col items-center gap-4 bg-black text-white px-12 py-8 rounded-[2.5rem] hover:scale-105 transition-transform shadow-2xl">
+                        <a href={BOOKSY_URL} target="_blank" rel="noreferrer" className="inline-flex flex-col items-center gap-4 bg-black text-white px-12 py-8 rounded-[2.5rem] hover:scale-105 transition-transform shadow-2xl">
                             <span className="text-xs font-black uppercase tracking-[0.4em] text-[#d4af37]">Abrir Booksy</span>
                             <span className="text-3xl font-bold">RESERVAR ONLINE AHORA</span>
                         </a>
