@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import { BOOKSY_URL, MAPS_URL, resenas, serviciosDestacados, carta, horario } from './data/contenido';
 import { ArrowRight, Star, CheckCircle, Calendar, MapPin, Clock, Banknote, AlertCircle, MessageCircle, Instagram, Facebook } from './components/icons';
 import Eyebrow from './components/Eyebrow';
@@ -6,6 +7,7 @@ import ServiceCard from './components/ServiceCard';
 import MenuCategory from './components/MenuCategory';
 import InfoBlock from './components/InfoBlock';
 import SocialLink from './components/SocialLink';
+import useAnimaciones from './useAnimaciones';
 
 const metricasHero = [
     { valor: '15+', etiqueta: 'Años de oficio' },
@@ -22,8 +24,11 @@ const metricasVerificables = [
 const nuevaPestana = <span className="sr-only">(se abre en otra pestaña)</span>;
 
 export default function App() {
+    const raiz = useRef(null);
+    useAnimaciones(raiz);
+
     return (
-        <div className="bg-surface text-gray-200 min-h-screen relative font-sans">
+        <div ref={raiz} className="bg-surface text-gray-200 min-h-screen relative font-sans">
             <a href="#contenido" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:bg-gold focus:text-black focus:px-6 focus:py-3 focus:font-bold">Saltar al contenido</a>
 
             {/* Encabezado y Navegación Principal */}
@@ -56,21 +61,21 @@ export default function App() {
                     <div className="relative max-w-7xl mx-auto px-4 w-full flex flex-col items-center">
                         <div className="flex flex-col items-start w-fit">
                             <div className="flex items-center gap-4 mb-8">
-                                <div className="w-16 h-px bg-gold"></div>
-                                <Eyebrow>Jerez de la Frontera · Est. 2012</Eyebrow>
+                                <div data-hero="linea" className="w-16 h-px bg-gold origin-left"></div>
+                                <Eyebrow data-hero="eyebrow">Jerez de la Frontera · Est. 2012</Eyebrow>
                             </div>
 
-                            <h1 className="text-[4rem] sm:text-[6rem] md:text-[8rem] lg:text-[9rem] font-black uppercase leading-[0.85] tracking-tighter mb-8">
+                            <h1 data-hero="titulo" className="text-[4rem] sm:text-[6rem] md:text-[8rem] lg:text-[9rem] font-black uppercase leading-[0.85] tracking-tighter mb-8">
                                 <span className="text-white block">Arte</span>
                                 <span className="text-gold block">En Cada</span>
                                 <span className="text-white block">Corte</span>
                             </h1>
 
-                            <p className="font-serif italic text-xl md:text-3xl text-gray-300 max-w-2xl mb-12 leading-relaxed">
+                            <p data-hero="texto" className="font-serif italic text-xl md:text-3xl text-gray-300 max-w-2xl mb-12 leading-relaxed">
                                 Donde la precisión se convierte en expresión. Tu imagen, elevada a una forma de arte.
                             </p>
 
-                            <div className="flex flex-col sm:flex-row gap-6 mb-20">
+                            <div data-hero="botones" className="flex flex-col sm:flex-row gap-6 mb-20">
                                 <a href={BOOKSY_URL} target="_blank" rel="noreferrer" className="bg-gold text-black px-8 py-4 font-bold tracking-label uppercase hover:bg-white transition-colors flex items-center justify-center gap-2 text-xs w-fit">
                                     Reservar Cita <ArrowRight size={16} />
                                 </a>
@@ -80,7 +85,7 @@ export default function App() {
                             </div>
                         </div>
 
-                        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 pt-10 border-t border-white/10 max-w-3xl w-full">
+                        <div data-hero="metricas" className="grid grid-cols-2 md:grid-cols-3 gap-8 pt-10 border-t border-white/10 max-w-3xl w-full">
                             {metricasHero.map((m) => (
                                 <div key={m.etiqueta}>
                                     <div className="text-4xl md:text-5xl text-gold mb-2 font-black tracking-tighter">{m.valor}</div>
@@ -100,7 +105,7 @@ export default function App() {
                 {/* Social Proof Dinámico */}
                 <section className="py-16 bg-zinc-950 border-y border-gray-900" aria-label="Testimonios y Reseñas">
                     <div className="max-w-7xl mx-auto px-4">
-                        <div className="grid md:grid-cols-3 gap-10">
+                        <div data-revelar-grupo className="grid md:grid-cols-3 gap-10">
                             {resenas.map((r) => <ReviewCard key={r.inicial} {...r} />)}
                         </div>
                     </div>
@@ -109,13 +114,13 @@ export default function App() {
                 {/* Sección GEO Optimizada (Preguntas Frecuentes para IA) */}
                 <section id="autoridad" className="py-24 bg-surface border-b border-white/5 relative" aria-label="Por qué elegirnos - Preguntas Frecuentes">
                     <div className="max-w-4xl mx-auto px-4 relative z-10">
-                        <div className="text-center mb-16">
+                        <div data-revelar className="text-center mb-16">
                             <Eyebrow className="mb-4 block">Autoridad Local</Eyebrow>
                             <h2 className="text-4xl md:text-5xl font-bold text-white">¿Por qué elegir José Estilistas?</h2>
                         </div>
 
                         <div className="space-y-16">
-                            <article>
+                            <article data-revelar>
                                 <h3 className="text-2xl font-bold text-white mb-4 leading-tight">¿Por qué José Estilistas es considerada la mejor barbería de Jerez de la Frontera?</h3>
                                 <p className="text-gray-400 text-lg leading-relaxed mb-6">José Estilistas destaca en Jerez de la Frontera por combinar la tradición del oficio barbero con las técnicas más vanguardistas de corte masculino. Fundada en 2012, nuestra clínica estética capilar garantiza resultados de máxima precisión gracias a más de quince años de experiencia y un entorno climatizado exclusivo.</p>
                                 <div className="bg-surface-raised border border-white/10 rounded-2xl p-6">
@@ -133,18 +138,18 @@ export default function App() {
 
                 {/* Servicios */}
                 <section id="servicios" className="py-24 max-w-7xl mx-auto px-4" aria-label="Nuestros Servicios">
-                    <div className="text-center mb-16">
+                    <div data-revelar className="text-center mb-16">
                         <h2 className="text-5xl font-bold text-white mb-6">Excelencia en cada detalle</h2>
                         <div className="w-24 h-1 bg-gold-gradient mx-auto mb-6"></div>
                         <p className="text-gray-400 max-w-2xl mx-auto text-lg italic">"En José Estilistas, combinamos la técnica clásica con las tendencias más vanguardistas."</p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
+                    <div data-revelar-grupo className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
                         {serviciosDestacados.map((s) => <ServiceCard key={s.titulo} {...s} />)}
                     </div>
 
                     {/* Carta de Servicios Completa */}
-                    <div className="max-w-4xl mx-auto card-dark p-8 md:p-12 rounded-panel shadow-2xl">
+                    <div data-revelar className="max-w-4xl mx-auto card-dark p-8 md:p-12 rounded-panel shadow-2xl">
                         <div className="text-center mb-12">
                             <h3 className="text-4xl font-bold text-gold mb-2">Carta de Servicios</h3>
                             <p className="text-gray-400 tracking-widest uppercase text-sm">Reserva online sin esperas</p>
@@ -166,7 +171,7 @@ export default function App() {
                 <section id="contacto" className="py-24 bg-zinc-950" aria-label="Ubicación y Contacto">
                     <div className="max-w-7xl mx-auto px-4">
                         <div className="grid lg:grid-cols-2 gap-16 items-center">
-                            <div className="space-y-10">
+                            <div data-revelar className="space-y-10">
                                 <h2 className="text-5xl font-bold text-white leading-tight">Encuéntranos en <br /><span className="text-gold">Jerez de la Frontera</span></h2>
 
                                 <div className="space-y-6">
@@ -207,7 +212,7 @@ export default function App() {
                                 </div>
                             </div>
 
-                            <div className="map-container relative rounded-panel overflow-hidden border-8 border-white/5 shadow-2xl h-[500px]">
+                            <div data-revelar className="map-container relative rounded-panel overflow-hidden border-8 border-white/5 shadow-2xl h-[500px]">
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1599.4132898093005!2d-6.1272882!3d36.702705!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0dc6c91b942609%3A0x1c1b8c89e268e203!2sJos%C3%A9%20Estilistas!5e0!3m2!1ses!2ses!4v1772478467162!5m2!1ses!2ses" width="100%" height="100%" style={{ border: 0 }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Mapa de ubicación de José Estilistas"></iframe>
                                 <div className="absolute bottom-6 left-6 right-6 bg-black/80 backdrop-blur-md p-6 rounded-3xl border border-white/10 text-center">
                                     <p className="text-white font-bold mb-2 uppercase tracking-widest text-xs">Visita a José Estilistas</p>
@@ -220,7 +225,7 @@ export default function App() {
 
                 {/* Reservas Booksy */}
                 <section id="reservas" className="py-24 bg-white text-black text-center" aria-label="Reservas Online">
-                    <div className="max-w-3xl mx-auto px-4">
+                    <div data-revelar className="max-w-3xl mx-auto px-4">
                         <h2 className="text-5xl font-bold mb-8 italic">Reserva tu momento</h2>
                         <p className="text-gray-600 mb-12 text-lg">Haz click en el botón para abrir el calendario de citas y elegir tu hora. Sin llamadas, sin esperas.</p>
 
