@@ -16,7 +16,7 @@ export const serviciosDestacados = [
         imagen: 'https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&q=80&w=800',
     },
     {
-        titulo: 'Afeitado Express / Arreglo Barba',
+        titulo: 'Afeitado Express o arreglo de barba',
         descripcion: 'Diseño y perfilado básico de barba para un aspecto limpio y cuidado en poco tiempo.',
         precio: '7,00 €',
         etiquetaReserva: 'Reservar Afeitado Express o Arreglo de Barba',
@@ -24,7 +24,7 @@ export const serviciosDestacados = [
     },
     {
         titulo: 'Corte Clásico',
-        descripcion: 'Corte tradicional a tijera o máquina. Incluye lavado, secado y peinado a medida.',
+        descripcion: 'Corte tradicional a tijera o máquina, con asesoramiento incluido. Lavado bajo petición.',
         precio: '12,00 €',
         etiquetaReserva: 'Reservar Corte Clásico',
         imagen: 'https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&q=80&w=800',
@@ -37,41 +37,41 @@ export const carta = [
     {
         categoria: 'Cortes de Cabello',
         servicios: [
-            { nombre: 'Corte clásico', precio: '12,00 €', duracion: '20 min', descripcion: 'Incluye: -Lavado y acondicionado (bajo petición) -Asesoramiento -Corte de...' },
-            { nombre: 'Corte Premium (Degradado)', precio: '13,00 €', duracion: '25 min', descripcion: 'Corte de cabello exclusivo para cambio radical de imagen de longitud de larga a...' },
-            { nombre: 'Corte INFANTIL (hasta 7 años)', precio: '10,00 €', duracion: '20 min', descripcion: 'Corte de cabello para niños de 0 a 7 años de edad. Utilizando productos de...' },
-            { nombre: 'Corte Woman (Rapado)', precio: '12,00 €', duracion: '20 min', descripcion: '* Corte femenino de cabello corto (Rapado). **Para cabello medio/largo...' },
-            { nombre: 'Corte laterales', precio: '10,00 €', duracion: '20 min', descripcion: 'El corte de pelo es un reflejo del carácter y la personalidad de uno. Dependiendo...' },
+            { nombre: 'Corte clásico', precio: '12,00 €', duracion: '20 min', descripcion: 'Asesoramiento y corte. Lavado y acondicionado bajo petición.' },
+            { nombre: 'Corte Premium (Degradado)', precio: '13,00 €', duracion: '25 min', descripcion: 'Degradado limpio y preciso, ideal para un cambio radical de imagen.' },
+            { nombre: 'Corte INFANTIL (hasta 7 años)', precio: '10,00 €', duracion: '20 min', descripcion: 'Corte para niños de 0 a 7 años.' },
+            { nombre: 'Corte Woman (Rapado)', precio: '12,00 €', duracion: '20 min', descripcion: 'Corte femenino para pelo corto o rapado.' },
+            { nombre: 'Corte laterales', precio: '10,00 €', duracion: '20 min' },
         ],
     },
     {
         categoria: 'Barba y Ritual',
         servicios: [
-            { nombre: 'Afeitado Express ó arreglo barba', precio: '7,00 €', duracion: '20 min', descripcion: 'Chicos, prestad atención: lucir una estupenda barba no es algo que pase p...' },
-            { nombre: 'Afeitado tradicional', precio: '14,00 €', duracion: '30 min', descripcion: 'Asesoramiento personalizado. Diseño y tallado de forma con mensaje final...' },
+            { nombre: 'Afeitado Express o arreglo de barba', precio: '7,00 €', duracion: '20 min', descripcion: 'Perfilado básico para una barba limpia y cuidada.' },
+            { nombre: 'Afeitado tradicional', precio: '14,00 €', duracion: '30 min', descripcion: 'Asesoramiento personalizado, diseño y tallado de la barba.' },
         ],
     },
     {
         categoria: 'Combos y Rituales Completos',
         servicios: [
-            { nombre: 'Corte clasico + Afeitado Express', precio: '17,00 €', duracion: '30 min', descripcion: 'Corte de cabello con asesoramiento personalizado. Arreglo de barba básico...' },
-            { nombre: 'Corte Premium (Degradado) +Afeitado Express', precio: '18,00 €', duracion: '40 min', descripcion: 'Corte de cabello exclusivo para cambio radical de imagen de longitud de larga a...' },
-            { nombre: 'Corte clasico + Afeitado tradicional', precio: '25,00 €', duracion: '40 min', descripcion: 'Corte de cabello con asesoramiento personalizado. Arreglo de barba con...' },
-            { nombre: 'Corte Premium (Degradado)+Afeitado tradicional', precio: '26,00 €', duracion: '40 min', descripcion: 'Corte de cabello con asesoramiento exclusivo para un cambio radical de...' },
+            { nombre: 'Corte clásico + Afeitado Express', precio: '17,00 €', duracion: '30 min', descripcion: 'Corte con asesoramiento personalizado y arreglo básico de barba.' },
+            { nombre: 'Corte Premium (Degradado) + Afeitado Express', precio: '18,00 €', duracion: '40 min', descripcion: 'Degradado y arreglo básico de barba.' },
+            { nombre: 'Corte clásico + Afeitado tradicional', precio: '25,00 €', duracion: '40 min', descripcion: 'Corte con asesoramiento personalizado y afeitado tradicional.' },
+            { nombre: 'Corte Premium (Degradado) + Afeitado tradicional', precio: '26,00 €', duracion: '40 min', descripcion: 'Degradado con asesoramiento personalizado y afeitado tradicional.' },
         ],
     },
     {
         categoria: 'Trabajos Técnicos',
         servicios: [
-            { nombre: 'Color Barba', precio: '15,00 €+', duracion: '20 min', descripcion: 'Para este tipo de servicio hay que coger cita telefónica al 658889486, ya que el...' },
-            { nombre: 'Tratamiento Anti-caida', precio: '4,00 €', duracion: '30 min' },
-            { nombre: 'Tratamiento Anti-Caspa', precio: '4,00 €', duracion: '30 min' },
+            { nombre: 'Color Barba', precio: '15,00 €+', duracion: '20 min', descripcion: 'Solo con cita por teléfono: llama al 658 889 486.' },
+            { nombre: 'Tratamiento anticaída', precio: '4,00 €', duracion: '30 min' },
+            { nombre: 'Tratamiento anticaspa', precio: '4,00 €', duracion: '30 min' },
         ],
     },
     {
         categoria: 'Wedding Barber Home',
         servicios: [
-            { nombre: 'Desplazamiento Al Domicilio', precio: 'Gratis', duracion: '30 min' },
+            { nombre: 'Desplazamiento a domicilio', precio: 'Gratis', duracion: '30 min' },
             { nombre: 'Opción 2', precio: '75,00 €+', duracion: '3 h' },
         ],
     },

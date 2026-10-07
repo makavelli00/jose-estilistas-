@@ -20,7 +20,7 @@ function PriceRow({ nombre, precio, duracion, descripcion }) {
 export default function MenuCategory({ categoria, servicios }) {
     return (
         <div>
-            <h4 className="text-2xl font-bold text-white border-b border-gray-800 pb-4 mb-6 uppercase tracking-wider">{categoria}</h4>
+            <h4 className="text-2xl font-bold text-gold border-b border-gray-800 pb-4 mb-6 uppercase tracking-wider">{categoria}</h4>
             <div className="space-y-6">
                 {servicios.map((s) => <PriceRow key={s.nombre} {...s} />)}
             </div>
