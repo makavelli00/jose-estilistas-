@@ -10,13 +10,13 @@ import SocialLink from './components/SocialLink';
 import useAnimaciones from './useAnimaciones';
 
 const metricasHero = [
-    { valor: '15+', etiqueta: 'Años de oficio' },
-    { valor: '226+', etiqueta: 'Clientes satisfechos' },
+    { valor: '+15', etiqueta: 'Años de oficio' },
+    { valor: '+226', etiqueta: 'Reseñas en Google' },
 ];
 
 const metricasVerificables = [
-    { titulo: 'Valoración Google:', valor: '5.0 Estrellas' },
-    { titulo: 'Reseñas reales:', valor: '+226 Clientes' },
+    { titulo: 'Valoración en Google:', valor: '5,0 estrellas' },
+    { titulo: 'Reseñas reales:', valor: '+226' },
     { titulo: 'Trayectoria:', valor: '+15 años de oficio' },
     { titulo: 'Año de fundación:', valor: '2012' },
 ];
@@ -94,7 +94,7 @@ export default function App() {
                             ))}
                             <div className="col-span-2 md:col-span-1">
                                 <div className="text-4xl md:text-5xl text-gold mb-2 font-black tracking-tighter flex items-center gap-2">
-                                    <Star size={32} fill="currentColor" className="lucide lucide-star" /> 5.0
+                                    <Star size={32} fill="currentColor" className="lucide lucide-star" /> 5,0
                                 </div>
                                 <div className="text-2xs md:text-xs tracking-label uppercase text-gray-400">Valoración media</div>
                             </div>
@@ -115,16 +115,16 @@ export default function App() {
                 <section id="autoridad" className="py-24 bg-surface border-b border-white/5 relative" aria-label="Por qué elegirnos - Preguntas Frecuentes">
                     <div className="max-w-4xl mx-auto px-4 relative z-10">
                         <div data-revelar className="text-center mb-16">
-                            <Eyebrow className="mb-4 block">Autoridad Local</Eyebrow>
+                            <Eyebrow className="mb-4 block">Desde 2012 en Jerez</Eyebrow>
                             <h2 className="text-4xl md:text-5xl font-bold text-white">¿Por qué elegir José Estilistas?</h2>
                         </div>
 
                         <div className="space-y-16">
                             <article data-revelar>
                                 <h3 className="text-2xl font-bold text-white mb-4 leading-tight">¿Por qué José Estilistas es considerada la mejor barbería de Jerez de la Frontera?</h3>
-                                <p className="text-gray-400 text-lg leading-relaxed mb-6">José Estilistas destaca en Jerez de la Frontera por combinar la tradición del oficio barbero con las técnicas más vanguardistas de corte masculino. Fundada en 2012, nuestra clínica estética capilar garantiza resultados de máxima precisión gracias a más de quince años de experiencia y un entorno climatizado exclusivo.</p>
+                                <p className="text-gray-400 text-lg leading-relaxed mb-6">José Estilistas destaca en Jerez de la Frontera por combinar la tradición del oficio barbero con las técnicas más vanguardistas de corte masculino. Desde 2012, cada corte se hace con la precisión que dan más de quince años de oficio, en un local cuidado y climatizado.</p>
                                 <div className="bg-surface-raised border border-white/10 rounded-2xl p-6">
-                                    <h4 className="text-white font-bold mb-4 uppercase tracking-widest text-xs">Métricas Verificables</h4>
+                                    <h4 className="text-white font-bold mb-4 uppercase tracking-widest text-xs">En cifras</h4>
                                     <ul className="grid sm:grid-cols-2 gap-4 text-sm text-gray-300">
                                         {metricasVerificables.map((m) => (
                                             <li key={m.titulo} className="flex items-center gap-3"><CheckCircle size={16} className="text-gold" /> <strong>{m.titulo}</strong> {m.valor}</li>
@@ -160,8 +160,8 @@ export default function App() {
                         </div>
 
                         <div className="mt-12 text-center">
-                            <a href={BOOKSY_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-gold-gradient text-black px-8 py-4 rounded-full font-bold hover:scale-105 transition-transform">
-                                <Calendar size={16} /> RESERVAR MI HORA AHORA
+                            <a href={BOOKSY_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-gold-gradient text-black px-8 py-4 rounded-full font-bold uppercase hover:scale-105 transition-transform">
+                                <Calendar size={16} /> Reservar mi cita
                             </a>
                         </div>
                     </div>
@@ -205,8 +205,8 @@ export default function App() {
 
                                     <InfoBlock icon={<Banknote />} iconClassName="text-red-500">
                                         <div>
-                                            <h3 className="font-sans text-white font-bold text-xl mb-1 tracking-tight italic">Aviso de Pago</h3>
-                                            <p className="text-red-400 font-bold uppercase text-sm tracking-widest">SOLO PAGO EN EFECTIVO</p>
+                                            <h3 className="font-sans text-white font-bold text-xl mb-1 tracking-tight italic">Forma de pago</h3>
+                                            <p className="text-red-400 font-bold uppercase text-sm tracking-widest">Solo efectivo</p>
                                         </div>
                                     </InfoBlock>
                                 </div>
@@ -216,7 +216,7 @@ export default function App() {
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1599.4132898093005!2d-6.1272882!3d36.702705!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0dc6c91b942609%3A0x1c1b8c89e268e203!2sJos%C3%A9%20Estilistas!5e0!3m2!1ses!2ses!4v1772478467162!5m2!1ses!2ses" width="100%" height="100%" style={{ border: 0 }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Mapa de ubicación de José Estilistas"></iframe>
                                 <div className="absolute bottom-6 left-6 right-6 bg-black/80 backdrop-blur-md p-6 rounded-3xl border border-white/10 text-center">
                                     <p className="text-white font-bold mb-2 uppercase tracking-widest text-xs">Visita a José Estilistas</p>
-                                    <a href={MAPS_URL} target="_blank" rel="noreferrer" className="inline-flex items-center min-h-tap bg-gold-gradient text-black px-6 py-2 rounded-full text-sm font-black">CÓMO LLEGAR {nuevaPestana}</a>
+                                    <a href={MAPS_URL} target="_blank" rel="noreferrer" className="inline-flex items-center min-h-tap bg-gold-gradient text-black px-6 py-2 rounded-full text-sm font-black uppercase">Cómo llegar {nuevaPestana}</a>
                                 </div>
                             </div>
                         </div>
@@ -227,11 +227,11 @@ export default function App() {
                 <section id="reservas" className="py-24 bg-white text-black text-center" aria-label="Reservas Online">
                     <div data-revelar className="max-w-3xl mx-auto px-4">
                         <h2 className="text-5xl font-bold mb-8 italic">Reserva tu momento</h2>
-                        <p className="text-gray-600 mb-12 text-lg">Haz click en el botón para abrir el calendario de citas y elegir tu hora. Sin llamadas, sin esperas.</p>
+                        <p className="text-gray-600 mb-12 text-lg">Elige día y hora en el calendario de Booksy. Sin llamadas y sin esperas.</p>
 
                         <a href={BOOKSY_URL} target="_blank" rel="noreferrer" className="inline-flex flex-col items-center gap-4 bg-black text-white px-12 py-8 rounded-card hover:scale-105 transition-transform shadow-2xl">
                             <span className="text-xs font-black uppercase tracking-eyebrow-wide text-gold">Abrir Booksy</span>
-                            <span className="text-3xl font-bold">RESERVAR ONLINE AHORA</span>
+                            <span className="text-3xl font-bold uppercase">Reservar online</span>
                             {nuevaPestana}
                         </a>
 
@@ -242,7 +242,7 @@ export default function App() {
                                     <AlertCircle size={20} /> Solo pago en efectivo en el local.
                                 </article>
                                 <article className="flex items-center gap-3 text-zinc-600">
-                                    <Calendar size={20} /> Cancela con 6h de antelación.
+                                    <Calendar size={20} /> Si no puedes venir, cancela con al menos 6 horas de antelación.
                                 </article>
                             </div>
                         </div>
