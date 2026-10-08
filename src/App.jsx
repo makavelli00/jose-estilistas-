@@ -11,12 +11,12 @@ import useAnimaciones from './useAnimaciones';
 
 const metricasHero = [
     { valor: '+15', etiqueta: 'Años de oficio' },
-    { valor: '+226', etiqueta: 'Reseñas en Google' },
+    { valor: '+268', etiqueta: 'Reseñas en Booksy' },
 ];
 
 const metricasVerificables = [
     { titulo: 'Valoración en Google:', valor: '5,0 estrellas' },
-    { titulo: 'Reseñas reales:', valor: '+226' },
+    { titulo: 'Reseñas en Booksy:', valor: '+268' },
     { titulo: 'Trayectoria:', valor: '+15 años de oficio' },
     { titulo: 'Año de fundación:', valor: '2012' },
 ];
