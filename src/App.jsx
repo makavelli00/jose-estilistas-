@@ -1,12 +1,13 @@
 import { useRef } from 'react';
 import { BOOKSY_URL, MAPS_URL, galeria, resenas, serviciosDestacados, carta, horario } from './data/contenido';
-import { ArrowRight, Star, CheckCircle, Calendar, MapPin, Clock, Banknote, AlertCircle, MessageCircle, Instagram, Facebook } from './components/icons';
+import { ArrowRight, Star, CheckCircle, Calendar, MapPin, Clock, Banknote, AlertCircle, Instagram, Facebook } from './components/icons';
 import Eyebrow from './components/Eyebrow';
 import ReviewCard from './components/ReviewCard';
 import ServiceCard from './components/ServiceCard';
 import MenuCategory from './components/MenuCategory';
 import InfoBlock from './components/InfoBlock';
 import SocialLink from './components/SocialLink';
+import WhatsAppIcon from './components/WhatsAppIcon';
 import useAnimaciones from './useAnimaciones';
 
 const metricasHero = [
@@ -284,7 +285,7 @@ export default function App() {
             {/* WhatsApp Button */}
             <aside aria-label="Contacto rápido">
                 <a href="https://wa.me/34658889486" target="_blank" rel="noreferrer" aria-label="Contactar por WhatsApp (se abre en otra pestaña)" className="sticky-cta bg-whatsapp text-white p-5 rounded-full shadow-whatsapp-glow hover:scale-110 transition-transform">
-                    <MessageCircle size={32} />
+                    <WhatsAppIcon size={32} />
                 </a>
             </aside>
         </div>
