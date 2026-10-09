@@ -1,6 +1,15 @@
 export const BOOKSY_URL = 'https://booksy.com/es-es/6593_jose-estilistas_barberia_26580_jerez-de-la-frontera';
 export const MAPS_URL = 'https://maps.app.goo.gl/sujN24vHKbXe4VPB9';
 
+// Galería de cortes. Fotos provisionales: para poner las vuestras, copiad las fotos en public/galeria/
+// y cambiad src por '/galeria/nombre-de-la-foto.jpg'. Se pueden añadir o quitar fotos libremente.
+export const galeria = [
+    { src: 'https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&q=80&w=800', alt: 'Degradado recién hecho' },
+    { src: 'https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&q=80&w=800', alt: 'Corte clásico a tijera' },
+    { src: 'https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&q=80&w=800', alt: 'Arreglo de barba' },
+    { src: 'https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&q=80&w=800', alt: 'Interior de la barbería' },
+];
+
 export const resenas = [
     { inicial: 'N', autor: 'Nacho • Cliente confirmado', texto: 'José es un crack. Se nota cuando alguien disfruta de su profesión. El local está estupendo y el servicio es inmejorable.' },
     { inicial: 'F', autor: 'José Fco. • Cliente habitual', texto: 'Todo lo que esperas de un buen barbero: corte preciso y conversación amena. El local muy limpio y bien climatizado.' },
