@@ -24,6 +24,5 @@ export const Calendar = icon(<><rect width="18" height="18" x="3" y="4" rx="2" r
 export const MapPin = icon(<><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" /><circle cx="12" cy="10" r="3" /></>, 'lucide lucide-map-pin');
 export const Banknote = icon(<><rect width="20" height="12" x="2" y="6" rx="2" /><circle cx="12" cy="12" r="2" /><line x1="6" x2="6" y1="12" y2="12" /><line x1="18" x2="18" y1="12" y2="12" /></>, 'lucide lucide-banknote');
 export const AlertCircle = icon(<><circle cx="12" cy="12" r="10" /><line x1="12" x2="12" y1="8" y2="12" /><line x1="12" x2="12.01" y1="16" y2="16" /></>, 'lucide lucide-alert-circle');
-export const MessageCircle = icon(<path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />, 'lucide lucide-message-circle');
 export const Instagram = icon(<><rect x="2" y="2" width="20" height="20" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" /></>);
 export const Facebook = icon(<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />);

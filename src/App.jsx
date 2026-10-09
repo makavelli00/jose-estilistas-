@@ -1,22 +1,23 @@
 import { useRef } from 'react';
-import { BOOKSY_URL, MAPS_URL, resenas, serviciosDestacados, carta, horario } from './data/contenido';
-import { ArrowRight, Star, CheckCircle, Calendar, MapPin, Clock, Banknote, AlertCircle, MessageCircle, Instagram, Facebook } from './components/icons';
+import { BOOKSY_URL, MAPS_URL, galeria, resenas, serviciosDestacados, carta, horario } from './data/contenido';
+import { ArrowRight, Star, CheckCircle, Calendar, MapPin, Clock, Banknote, AlertCircle, Instagram, Facebook } from './components/icons';
 import Eyebrow from './components/Eyebrow';
 import ReviewCard from './components/ReviewCard';
 import ServiceCard from './components/ServiceCard';
 import MenuCategory from './components/MenuCategory';
 import InfoBlock from './components/InfoBlock';
 import SocialLink from './components/SocialLink';
+import WhatsAppIcon from './components/WhatsAppIcon';
 import useAnimaciones from './useAnimaciones';
 
 const metricasHero = [
     { valor: '+15', etiqueta: 'Años de oficio' },
-    { valor: '+226', etiqueta: 'Reseñas en Google' },
+    { valor: '+268', etiqueta: 'Reseñas en Booksy' },
 ];
 
 const metricasVerificables = [
     { titulo: 'Valoración en Google:', valor: '5,0 estrellas' },
-    { titulo: 'Reseñas reales:', valor: '+226' },
+    { titulo: 'Reseñas en Booksy:', valor: '+268' },
     { titulo: 'Trayectoria:', valor: '+15 años de oficio' },
     { titulo: 'Año de fundación:', valor: '2012' },
 ];
@@ -99,6 +100,24 @@ export default function App() {
                                 <div className="text-2xs md:text-xs tracking-label uppercase text-gray-400">Valoración media</div>
                             </div>
                         </div>
+                    </div>
+                </section>
+
+                {/* Galería de cortes */}
+                <section id="galeria" className="py-24 max-w-7xl mx-auto px-4" aria-labelledby="titulo-galeria">
+                    <div data-revelar className="text-center mb-12">
+                        <Eyebrow className="mb-4 block">Galería</Eyebrow>
+                        <h2 id="titulo-galeria" className="text-4xl md:text-5xl font-bold text-white">Nuestros cortes</h2>
+                    </div>
+                    <ul data-revelar-grupo className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                        {galeria.map((foto) => (
+                            <li key={foto.src} className="aspect-square overflow-hidden rounded-3xl border border-white/10">
+                                <img src={foto.src} alt={foto.alt} loading="lazy" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                            </li>
+                        ))}
+                    </ul>
+                    <div className="mt-10 text-center">
+                        <a href="https://www.instagram.com/joseestilistas/" target="_blank" rel="noreferrer" className="inline-flex items-center min-h-tap text-gold font-bold border-b border-gold/30 pb-1 hover:border-gold transition-all">Ver más cortes en Instagram → {nuevaPestana}</a>
                     </div>
                 </section>
 
@@ -266,7 +285,7 @@ export default function App() {
             {/* WhatsApp Button */}
             <aside aria-label="Contacto rápido">
                 <a href="https://wa.me/34658889486" target="_blank" rel="noreferrer" aria-label="Contactar por WhatsApp (se abre en otra pestaña)" className="sticky-cta bg-whatsapp text-white p-5 rounded-full shadow-whatsapp-glow hover:scale-110 transition-transform">
-                    <MessageCircle size={32} />
+                    <WhatsAppIcon size={32} />
                 </a>
             </aside>
         </div>
